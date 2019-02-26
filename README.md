@@ -1,6 +1,8 @@
 # React Calendar App
 Practice ES7 & React v16+ by implementing a calendar component library with custom made react-redux and react-router.
 
+http://react-calendar-and-reactreduxconnect-reactrouter-from-scratch.s3-website-us-east-1.amazonaws.com/
+
 ## Core Objective
 Create a web app with a calendar that:
 - Displays any month of any year with the right start Day 1 (eg. Feb 1st 2019 starts on a Friday)
