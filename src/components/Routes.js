@@ -16,8 +16,8 @@ export default class Routes extends PureComponent {
   render () {
     return (
   	 <Router defaultPath="/">
-         <Route path="/" exact component={HomePage} />
-         <Route path="/calendar" exact component={CalendarPage} />
+         <Route path="/" exact component={CalendarPage} />
+         <Route path="/home" exact component={HomePage} />
          <Route path="/demo" exact component={DemoPage} />
       </Router>
     )

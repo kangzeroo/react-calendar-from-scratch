@@ -37,7 +37,7 @@ class CalendarPage extends PureComponent {
       <div id='CalendarPage'>
         <div
           className='back-btn-div'
-          onClick={this.redirectURL('/')}>
+          onClick={this.redirectURL('/home')}>
           <div className='back-btn'>↩</div>
         </div>
         <div className='title-header'>
