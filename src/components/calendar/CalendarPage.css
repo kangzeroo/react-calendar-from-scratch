@@ -1,0 +1,60 @@
+
+#CalendarPage {
+
+}
+
+.title-header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.view-calendar {
+  color: white;
+  font-weight: 500;
+  width: 200px;
+  border: 1.2px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.back-btn-div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-btn {
+  padding: 5px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background-color: rgba(256,256,256,0.15);
+}
