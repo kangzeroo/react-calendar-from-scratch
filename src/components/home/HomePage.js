@@ -9,6 +9,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import showdown from 'showdown'
+import * as serviceWorker from '../../serviceWorker';
 import './HomePage.css';
 import { withRouter } from '../../system/CustomReactRouter';
 
@@ -51,6 +52,7 @@ class HomePage extends PureComponent {
       - Events have a title, description, date, start datetime and end datetime
       - Calendar can display multiple events in a day
       - Calendar can display multi-day events
+      - Save thousands of events to IndexDB via a HOC
 
       ## Constraints
       You cannot use any of the following libraries. You must re-implement them from scratch.
@@ -58,6 +60,22 @@ class HomePage extends PureComponent {
       - 'react-redux'
     `
     return converter.makeHtml(md)
+  }
+
+  startIndexDB = () => {
+    const request = indexedDB.open("react-calendar")
+    request.onerror = function(event) {
+      alert("Why didn't you allow my web app to use IndexedDB?!");
+    };
+    request.onsuccess = function(event) {
+      this.db = event.target.result;
+      console.log(this.db)
+    };
+  }
+
+  startServiceWorker = () => {
+    console.log('Lets start')
+    serviceWorker.register();
   }
 
   render () {
@@ -68,6 +86,20 @@ class HomePage extends PureComponent {
         </div>
 
         {/*<div className='next-appt-notification'>Next Appointment at:</div>*/}
+        <div
+          className='view-calendar'
+          onClick={this.startServiceWorker}
+        >
+          START SERVICE WORKER
+        </div>
+        <br/>
+        <div
+          className='view-calendar'
+          onClick={this.startIndexDB}
+        >
+          START INDEXDB
+        </div>
+        <br/>
         <div
           className='view-calendar'
           onClick={this.redirectURL('/')}
